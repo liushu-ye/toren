@@ -31,10 +31,17 @@ app.include_router(user_router, prefix="/api/users", tags=["users"])
 app.include_router(task_router, prefix="/api/tasks", tags=["tasks"])
 app.include_router(admin_router, prefix="/api/admin", tags=["admin"])
 
+
 @app.get("/")
 def read_root():
     return {"message": "Welcome to Toren API"}
 
+
 @app.get("/health")
 def health_check():
     return {"status": "healthy"}
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

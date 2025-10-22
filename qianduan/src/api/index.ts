@@ -2,9 +2,21 @@ import axios from 'axios'
 
 // 创建 axios 实例
 const service = axios.create({
-  baseURL: import.meta.env.VITE_API_BASE_URL, // 读取 .env 配置
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   timeout: 10000,
 })
+
+// 请求拦截器 - 统一添加 /api/ 前缀
+service.interceptors.request.use(
+  (config) => {
+    // 如果不是绝对路径且不以 /api/ 开头，添加 /api/ 前缀
+    if (config.url && !config.url.startsWith('http') && !config.url.startsWith('/api/')) {
+      config.url = `/api/${config.url}`
+    }
+    return config
+  },
+  (error) => Promise.reject(error)
+)
 
 // 请求拦截器
 service.interceptors.request.use(

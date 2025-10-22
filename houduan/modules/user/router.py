@@ -5,16 +5,18 @@ from sqlalchemy.orm import Session
 from core.dependencies import get_db, get_current_active_user
 from db.models.user import User
 from modules.user.schemas import (
-    UserCreate, UserUpdate, UserResponse, Token, UserLogin
+    UserCreate, UserUpdate, UserResponse
 )
 from modules.user.service import user_service
 
 router = APIRouter()
 
+
 @router.post("/register", response_model=dict, status_code=status.HTTP_201_CREATED)
 def register(user_create: UserCreate, db: Session = Depends(get_db)):
     """用户注册"""
     return user_service.register_user(db, user_create)
+
 
 @router.post("/login", response_model=dict)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
@@ -28,10 +30,12 @@ def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depend
         )
     return result
 
+
 @router.get("/me", response_model=UserResponse)
 def get_current_user_info(current_user: User = Depends(get_current_active_user)):
     """获取当前用户信息"""
     return current_user
+
 
 @router.put("/me", response_model=dict)
 def update_current_user(
@@ -42,6 +46,7 @@ def update_current_user(
     """更新当前用户信息"""
     return user_service.update_user_profile(db, current_user.id, user_update)
 
+
 @router.post("/change-password", response_model=dict)
 def change_password(
     current_password: str,
@@ -51,6 +56,7 @@ def change_password(
 ):
     """修改密码"""
     return user_service.change_password(db, current_user.id, current_password, new_password)
+
 
 @router.post("/logout", response_model=dict)
 def logout(current_user: User = Depends(get_current_active_user)):
