@@ -15,7 +15,7 @@ service.interceptors.request.use(
     }
     return config
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 )
 
 // 请求拦截器
@@ -28,7 +28,7 @@ service.interceptors.request.use(
     }
     return config
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 )
 
 // 响应拦截器
@@ -46,7 +46,7 @@ service.interceptors.response.use(
   (error) => {
     window.alert('网络错误或服务器异常')
     return Promise.reject(error)
-  }
+  },
 )
 
 export default service

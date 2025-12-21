@@ -8,13 +8,13 @@ const router = createRouter({
       path: '/',
       name: 'Home',
       component: () => import('@/pages/testHome.vue'),
-      meta: { requiresAuth: true } // 需要登录
+      meta: { requiresAuth: true }, // 需要登录
     },
     {
       path: '/login',
       name: 'Login',
       component: () => import('@/pages/logoIn.vue'),
-      meta: { requiresAuth: false } // 不需要登录
+      meta: { requiresAuth: false }, // 不需要登录
     },
   ],
 })

@@ -1,4 +1,4 @@
-<script setup lang='ts'>
+<script setup lang="ts">
 import { useUserStore } from '@/stores/user'
 
 const { setToken, setUserInfo, clearToken } = useUserStore()
@@ -11,16 +11,11 @@ const login = () => {
 const logout = () => {
   clearToken()
 }
-
-
-
 </script>
 
 <template>
-    <button @click="login">登录</button>
-    <button @click="logout">退出登录</button>
+  <button @click="login">登录</button>
+  <button @click="logout">退出登录</button>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
