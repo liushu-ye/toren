@@ -1,8 +1,14 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import lingDong from '@/lingdong/lingDong.vue'
+
+</script>
 
 <template>
   <div>
-    <router-view></router-view>
+    <lingDong/>
+  </div>
+  <div>
+    <router-view/>
   </div>
 </template>
 

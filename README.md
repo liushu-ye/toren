@@ -13,7 +13,7 @@
 - 后台管理面板（任务审核、用户管理）
 
 ## 技术栈
-- **前端**：Vue 3 + TypeScript + Pinia + Vite
+- **前端**：Vu0.e 3 + TypeScript + Pinia + Vite + tailwindcss
 - **后端**：FastAPI + SQLite（初期） / PostgreSQL（后期）
 - **工具**：Git + GitHub + VS Code
 
