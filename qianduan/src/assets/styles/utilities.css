@@ -1,0 +1,17 @@
+/* 1. 声明 Tailwind 工具类层（Layer） */
+@layer utilities {
+  /* 2. 隐藏滚动条（Firefox 专属属性） */
+  .no-scrollbar {
+    scrollbar-width: none; /* Firefox：隐藏滚动条，不占用空间 */
+  }
+
+  /* 3. 隐藏滚动条（WebKit 内核：Chrome/Safari/Edge 等） */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none; /* 直接隐藏滚动条元素 */
+  }
+
+  /* 4. 移除移动端点击高亮 */
+  .tap-highlight-none {
+    -webkit-tap-highlight-color: transparent; /* WebKit 内核专属，设为透明 */
+  }
+}

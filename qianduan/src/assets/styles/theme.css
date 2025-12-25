@@ -1,0 +1,26 @@
+@layer base {
+  :root {
+    /* ===== 主色调 ===== */
+    --color-bg-main: #f6eaea;
+    --color-bg-panel: #f9efef;
+
+    --color-border-soft: #e8cfcf;
+    --color-border-strong: #d8b5b5;
+
+    /* ===== 强调色 ===== */
+    --color-primary: #f59fa0;
+    --color-primary-soft: #fde4e4;
+
+    /* ===== 文本 ===== */
+    --color-text-main: #3a2f2f;
+    --color-text-sub: #7a6a6a;
+
+    /* ===== 阴影 ===== */
+    --shadow-panel: 0 6px 16px rgba(0, 0, 0, 0.08);
+  }
+
+  body {
+    background-color: var(--color-bg-main);
+    color: var(--color-text-main);
+  }
+}

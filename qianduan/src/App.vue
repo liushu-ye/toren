@@ -3,12 +3,10 @@ import lingDong from '@/lingdong/lingDong.vue'
 </script>
 
 <template>
-  <div>
-    <lingDong />
-  </div>
-  <div>
+    <!-- 导航 -->
+    <lingDong/>
+    <!-- 路由出口 -->
     <router-view />
-  </div>
 </template>
 
 <style scoped></style>

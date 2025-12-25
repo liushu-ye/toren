@@ -5,7 +5,16 @@ export default {
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        brand: {
+          primary: '#007bff',
+        },
+      },
+      borderRadius: {
+        panel: '0.25rem',
+      },
+    },
   },
   plugins: [],
 }
