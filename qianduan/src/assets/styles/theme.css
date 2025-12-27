@@ -1,8 +1,14 @@
 @layer base {
   :root {
     /* ===== 主色调 ===== */
-    --color-bg-main: #f6eaea;
-    --color-bg-panel: #f9efef;
+    --color-bg-white: #D0D0D0;
+    --color-bg-grey: #A9B4C2;
+    --color-bg-blue: #3A8CFF;
+    --color-bg-green: #5BDA7D;
+    --color-bg-purple: #7A3CFF;
+    --color-bg-gold: #FFB236;
+    --color-bg-red: #FF4444;
+    --color-bg-black: #222222;
 
     --color-border-soft: #e8cfcf;
     --color-border-strong: #d8b5b5;
