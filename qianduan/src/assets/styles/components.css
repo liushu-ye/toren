@@ -14,8 +14,12 @@
    * =============================== */
   .rail {
     @apply fixed z-50 flex items-center;
-    background-color: var(--color-bg-panel);
+    background-color: var(--color-bg-gold);
     border-color: var(--color-border-strong);
+  }
+  .rails {
+    @apply fixed;
+    
   }
 
   .rail-top {
@@ -23,7 +27,7 @@
   }
 
   .rail-left {
-    @apply top-0 left-0 h-full w-12 border-r;
+    @apply top-0 left-0 h-12 w-12 border-r flex-col;
   }
 
   .rail-right {
@@ -31,13 +35,12 @@
   }
 
   .rail-item {
-    @apply flex items-center justify-center
-           w-10 h-10 rounded-lg cursor-pointer
-           transition;
+    @apply flex items-center justify-center w-12 h-12 rounded-lg cursor-pointer transition;
   }
 
+
   .rail-item:hover {
-    background-color: var(--color-primary-soft);
+    background-color: var(--color-bg-black);
   }
 
   .rail-item--active {
