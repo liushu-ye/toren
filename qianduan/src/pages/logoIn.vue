@@ -14,7 +14,7 @@ const logout = () => {
 </script>
 
 <template>
-  <button @click="login">登录</button>
+  <button @click="login">登录吧</button>
   <button @click="logout">退出登录</button>
 </template>
 
