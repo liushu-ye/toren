@@ -1,0 +1,18 @@
+/* 颜色系统 */
+@layer theme {
+  :root {
+    /* 基础颜色 */
+    --color-bg-gold: #f59e0b;
+    --color-bg-slate: #1e293b;
+    
+    /* 文本颜色 */
+    --color-text-primary: #f8fafc;
+    --color-text-secondary: #94a3b8;
+    
+    /* 状态颜色 */
+    --color-success: #10b981;
+    --color-warning: #f59e0b;
+    --color-error: #ef4444;
+    --color-info: #3b82f6;
+  }
+}

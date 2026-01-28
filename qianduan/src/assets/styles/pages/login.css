@@ -1,0 +1,6 @@
+/* 登录页样式 */
+@layer components {
+  .login-container {
+    @apply min-h-screen flex items-center justify-center bg-gray-100;
+  }
+}

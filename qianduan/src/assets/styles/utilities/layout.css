@@ -1,0 +1,14 @@
+/* 布局工具 */
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  
+  .flex-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+}

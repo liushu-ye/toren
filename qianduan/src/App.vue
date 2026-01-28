@@ -1,12 +1,16 @@
 <script setup lang="ts">
-import lingDong from '@/lingdong/lingDong.vue'
+import zhao from '@/zhao/zhao.vue'
 </script>
 
 <template>
     <!-- 导航 -->
-    <lingDong/>
+        <zhao/>
     <!-- 路由出口 -->
-    <router-view />
+        <router-view />
+
+        
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>

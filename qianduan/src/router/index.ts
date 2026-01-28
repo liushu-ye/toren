@@ -16,6 +16,42 @@ const router = createRouter({
       component: () => import('@/pages/logoIn.vue'),
       meta: { requiresAuth: false }, // 不需要登录
     },
+    {
+      path: '/time',
+      name: 'time',
+      component: () => import('@/components/time.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
+    {
+      path: '/learn',
+      name: 'learn',
+      component: () => import('@/pages/learn.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
+    {
+      path: '/setting',
+      name: 'setting',
+      component: () => import('@/pages/setting.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
+    {
+      path: '/feedback',
+      name: 'feedback',
+      component: () => import('@/pages/feedback.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
+    {
+      path: '/public',
+      name: 'public',
+      component: () => import('@/pages/public.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
+    {
+      path: '/testHome',
+      name: 'testHome',
+      component: () => import('@/pages/testHome.vue'),
+      meta: { requiresAuth: false }, // 不需要登录
+    },
   ],
 })
 

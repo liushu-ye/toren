@@ -1,0 +1,6 @@
+/* 公共页样式 */
+@layer components {
+  .public-container {
+    @apply min-h-screen bg-white;
+  }
+}

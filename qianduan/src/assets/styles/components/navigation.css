@@ -1,0 +1,10 @@
+/* 导航组件样式 */
+@layer components {
+  .nav-link {
+    @apply px-3 py-2 text-gray-700 hover:text-blue-500 transition-colors duration-200;
+  }
+  
+  .nav-active {
+    @apply text-blue-600 font-medium;
+  }
+}

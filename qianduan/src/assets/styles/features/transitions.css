@@ -1,0 +1,10 @@
+/* 过渡效果 */
+@layer components {
+  .transition-all {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  
+  .transition-colors {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+}

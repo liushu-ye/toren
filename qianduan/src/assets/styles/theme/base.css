@@ -10,8 +10,6 @@
     --color-bg-red: #FF4444;
     --color-bg-black: #222222;
 
-    --color-border-soft: #e8cfcf;
-    --color-border-strong: #d8b5b5;
 
     /* ===== 强调色 ===== */
     --color-primary: #f59fa0;
@@ -23,10 +21,24 @@
 
     /* ===== 阴影 ===== */
     --shadow-panel: 0 6px 16px rgba(0, 0, 0, 0.08);
+
+  /* rail */
+  --side-rail-width: 10px;
+  --side-rail-bg: color-mix(in oklab, black 28%, transparent);
+
+  /* drawer */
+  --side-drawer-width: 72vw;
+  --side-drawer-bg: #020617; /* slate-950 */
+  --side-drawer-border: color-mix(in oklab, white 10%, transparent);
+
+  /* motion */
+  --side-motion: 260ms;
   }
 
   body {
     background-color: var(--color-bg-white);
     color: var(--color-text-main);
   }
+
+  
 }

@@ -38,13 +38,14 @@ service.interceptors.response.use(
     if (res.code === 0) {
       return res.data
     } else {
-      // 这里可以做统一错误提示处理
-      window.alert(res.message || '请求失败')
+      // 使用更优雅的错误处理方式，避免频繁 alert
+      console.error('API错误:', res.message || '请求失败')
       return Promise.reject(res)
     }
   },
   (error) => {
-    window.alert('网络错误或服务器异常')
+    // 使用 console.error 替代 alert，避免浏览器保持活跃状态
+    console.error('网络错误:', error.message || '网络错误或服务器异常')
     return Promise.reject(error)
   },
 )

@@ -1,0 +1,6 @@
+/* 首页样式 */
+@layer components {
+  .home-container {
+    @apply min-h-screen bg-gray-50;
+  }
+}
