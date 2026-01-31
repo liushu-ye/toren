@@ -1,44 +1,79 @@
 /* src/assets/components/side.css */
 @layer components {
-  /* 公共 rail 基础能力 */
+  /* 侧边栏基础样式 - 固定定位、垂直布局、居中对齐 */
   .side-rail-base {
-    @apply fixed 
-            w-1
+    @apply fixed
            flex flex-col
            justify-center
            gap-3
-           transition-all duration-300
+           transition-all duration-300 ease-out
            overflow-hidden
-           bg-slate-800/40;
+           backdrop-blur-md;
+    /* 浅色渐变背景，营造现代感 */
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(248,250,252,0.95) 100%);
+    /* 多层阴影增加立体感 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.05);
   }
 
+  /* 左侧侧边栏 - 靠左、右侧圆角、内容左对齐 */
   .side-rail-left {
-    @apply left-0 rounded-r-xl items-start;
+    @apply left-0 rounded-r-2xl items-start;
+    border-left: none;
+    border: 1px solid rgba(0,0,0,0.06);
   }
 
+  /* 右侧侧边栏 - 靠右、左侧圆角、内容右对齐 */
   .side-rail-right {
-    @apply right-0 rounded-l-xl items-end;
+    @apply right-0 rounded-l-2xl items-end;
+    border-right: none;
+    border: 1px solid rgba(0,0,0,0.06);
   }
 
-  /* 子项统一样式 */
+  /* 导航按钮项样式 - 初始透明、圆角、居中布局 */
   .rail-item {
     @apply opacity-0
-           w-8 h-16
-           rounded-md
+           w-10 h-14
+           rounded-xl
            flex items-center justify-center
-           text-slate-200
-           transition-opacity duration-200;
-    background-color: var(--color-bg-gold);
+           transition-all duration-200 ease-out
+           cursor-pointer
+           hover:scale-105;
+    /* 蓝色渐变背景，清新现代 */
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    /* 轻微阴影增加层次 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.06);
+    border: 1px solid rgba(59,130,246,0.2);
   }
 
+  /* 导航按钮悬停效果 - 背景加深、阴影增强、轻微放大 */
+  .rail-item:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    box-shadow: 0 4px 8px rgba(59,130,246,0.15);
+    transform: scale(1.05);
+  }
+
+  /* 导航图标样式 - 固定尺寸、平滑过渡 */
+  .rail-item img {
+    @apply w-6 h-6
+           transition-transform duration-200;
+  }
+
+  /* 导航图标悬停效果 - 图标放大 */
+  .rail-item:hover img {
+    transform: scale(1.1);
+  }
+
+  /* 侧边栏关闭状态 - 极窄宽度 */
   .side-closed {
-    @apply w-2;
+    @apply w-1.5;
   }
 
+  /* 侧边栏打开状态 - 展开宽度 */
   .side-open {
-    @apply w-11;
+    @apply w-12;
   }
 
+  /* 侧边栏打开时显示导航按钮 - 完全不透明 */
   .side-open .rail-item {
     @apply opacity-100;
   }

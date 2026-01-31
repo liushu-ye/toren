@@ -7,8 +7,8 @@ const router = createRouter({
     {
       path: '/',
       name: 'Home',
-      component: () => import('@/pages/testHome.vue'),
-      meta: { requiresAuth: true }, // 需要登录
+      component: () => import('@/pages/home.vue'),
+      meta: { requiresAuth: false }, // 需要登录
     },
     {
       path: '/login',
@@ -46,12 +46,7 @@ const router = createRouter({
       component: () => import('@/pages/public.vue'),
       meta: { requiresAuth: false }, // 不需要登录
     },
-    {
-      path: '/testHome',
-      name: 'testHome',
-      component: () => import('@/pages/testHome.vue'),
-      meta: { requiresAuth: false }, // 不需要登录
-    },
+    
   ],
 })
 

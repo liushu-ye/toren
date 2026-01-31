@@ -12,6 +12,10 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
   ],
+  server: {
+    host: true,
+    port: 5173,
+  },
   css: {
     postcss: {
       config: {

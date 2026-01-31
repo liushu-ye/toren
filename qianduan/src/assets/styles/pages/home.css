@@ -1,6 +1,97 @@
-/* 首页样式 */
 @layer components {
-  .home-container {
-    @apply min-h-screen bg-gray-50;
+  /* ===============================
+   * 页面整体
+   * =============================== */
+  .task-page {
+    @apply min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24;
+  }
+
+  .task-main {
+    @apply px-4 mt-4;
+  }
+
+  .task-grid {
+    @apply grid grid-cols-2 gap-4;
+  }
+
+  /* ===============================
+   * 通用卡片基础样式
+   * =============================== */
+  .task-card {
+    @apply bg-white rounded-xl overflow-hidden
+           border-2 shadow-md
+           transition-all duration-300
+           hover:shadow-lg hover:-translate-y-1
+           cursor-pointer;
+  }
+
+  /* ===============================
+   * 横向大卡
+   * =============================== */
+  .task-big {
+    @apply col-span-2 flex h-40;
+  }
+
+  .task-big-image {
+    @apply relative h-full shrink-0;
+    width: 48%;
+  }
+
+  .task-big-gradient {
+    @apply absolute inset-y-0 right-0 w-24
+           bg-gradient-to-r from-transparent via-white/30 to-white;
+  }
+
+  .task-big-tag {
+    @apply absolute top-0 left-0
+           text-[10px] font-bold text-white
+           px-2 py-1 rounded-br-lg shadow-sm;
+  }
+
+  .task-big-content {
+    @apply flex-1 pl-3 pr-4 py-3
+           flex flex-col justify-between relative;
+  }
+
+  .task-big-level-bg {
+    @apply absolute right-0 top-0
+           text-[56px] font-black opacity-[0.02];
+  }
+
+  /* ===============================
+   * 竖向小卡
+   * =============================== */
+  .task-small {
+    @apply flex flex-col;
+  }
+
+  .task-small-image {
+    @apply relative aspect-4/3;
+  }
+
+  .task-small-gradient {
+    @apply absolute inset-x-0 bottom-0 h-2/5
+           bg-gradient-to-t from-white via-white/60 to-transparent;
+  }
+
+  .task-small-rank {
+    @apply absolute top-2 right-2
+           text-[9px] font-black bg-white/95
+           px-1.5 py-0.5 rounded shadow-sm;
+  }
+
+  .task-small-content {
+    @apply -mt-5 px-3 pt-1 pb-3.5
+           flex flex-col justify-between
+           flex-1 relative z-10;
+  }
+
+  /* ===============================
+   * 底部提示
+   * =============================== */
+  .task-footer {
+    @apply text-center mt-10 mb-4
+           text-slate-300 text-xs
+           tracking-wider py-2;
   }
 }
