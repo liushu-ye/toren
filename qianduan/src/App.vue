@@ -8,7 +8,7 @@ import zhao from '@/zhao/zhao.vue'
     <!-- 路由出口 -->
         <router-view />
 
-        测试
+        
 </template>
 
 <style scoped>

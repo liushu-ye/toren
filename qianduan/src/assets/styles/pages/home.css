@@ -2,14 +2,21 @@
   /* ===============================
    * 页面整体
    * =============================== */
+  /* 任务页面主容器 - 设置最小高度、背景色、文字颜色和字体 */
+  /* 采用#f8f9fa浅灰色背景，营造简洁现代的视觉效果 */
+  /* pb-24为底部留出足够空间，避免内容被导航栏遮挡 */
   .task-page {
     @apply min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24;
   }
 
+  /* 任务页面主要内容区域 - 添加左右内边距和顶部间距 */
+  /* px-4确保在移动设备上有合适的边距，mt-4与页面顶部留出空间 */
   .task-main {
     @apply px-4 mt-4;
   }
 
+  /* 任务网格布局 - 使用CSS Grid实现两列布局 */
+  /* grid-cols-2创建两列网格，gap-4为卡片间提供合适间距 */
   .task-grid {
     @apply grid grid-cols-2 gap-4;
   }
@@ -17,6 +24,12 @@
   /* ===============================
    * 通用卡片基础样式
    * =============================== */
+  /* 任务卡片基础样式 - 设置背景、圆角、边框和阴影 */
+  /* bg-white白色背景，rounded-xl大圆角营造现代感 */
+  /* border-2添加2px边框，shadow-md提供中等阴影 */
+  /* transition-all duration-300实现平滑过渡效果 */
+  /* hover:shadow-lg hover:-translate-y-1悬停时阴影增大并轻微上浮 */
+  /* cursor-pointer设置鼠标指针为手形，提升交互体验 */
   .task-card {
     @apply bg-white rounded-xl overflow-hidden
            border-2 shadow-md
@@ -28,31 +41,57 @@
   /* ===============================
    * 横向大卡
    * =============================== */
+  /* 横向大卡容器 - 跨越两列，使用flex布局，固定高度 */
+  /* col-span-2使其占据整个网格宽度，flex实现内部元素横向排列 */
+  /* h-40固定高度，确保卡片大小一致 */
   .task-big {
     @apply col-span-2 flex h-40;
   }
 
+  /* 横向大卡图片容器 - 相对定位，高度100%，不缩放 */
+  /* relative为内部绝对定位元素提供参考，h-full填满卡片高度 */
+  /* shrink-0防止图片被压缩，保持原始比例 */
+  /* width: 48%设置图片宽度占卡片的48%，预留空间给内容 */
   .task-big-image {
     @apply relative h-full shrink-0;
     width: 48%;
   }
 
+  /* 横向大卡渐变遮罩 - 绝对定位，从透明到白色的渐变 */
+  /* absolute inset-y-0 right-0固定在图片右侧 */
+  /* w-24设置遮罩宽度，bg-gradient-to-r实现从右到左的渐变 */
+  /* from-transparent via-white/30 to-white创建平滑过渡效果 */
+  /* 用于图片与文字内容的自然衔接，避免生硬边界 */
   .task-big-gradient {
     @apply absolute inset-y-0 right-0 w-24
            bg-gradient-to-r from-transparent via-white/30 to-white;
   }
 
+  /* 横向大卡标签 - 绝对定位在图片左上角 */
+  /* absolute top-0 left-0固定在左上角 */
+  /* text-[10px]小字体，font-bold加粗，text-white白色文字 */
+  /* px-2 py-1适当内边距，rounded-br-lg左下角圆角 */
+  /* shadow-sm添加轻微阴影，提升视觉层次感 */
   .task-big-tag {
     @apply absolute top-0 left-0
            text-[10px] font-bold text-white
            px-2 py-1 rounded-br-lg shadow-sm;
   }
 
+  /* 横向大卡内容区域 - 弹性布局，占据剩余空间 */
+  /* flex-1使其占据剩余宽度，pl-3 pr-4 py-3设置内边距 */
+  /* flex flex-col justify-between实现垂直方向的两端对齐 */
+  /* relative为内部绝对定位元素提供参考 */
   .task-big-content {
     @apply flex-1 pl-3 pr-4 py-3
            flex flex-col justify-between relative;
   }
 
+  /* 横向大卡等级背景 - 绝对定位在内容右上角 */
+  /* absolute right-0 top-0固定在右上角 */
+  /* text-[56px]超大字体，font-black加粗 */
+  /* opacity-[0.02]极低透明度，作为背景装饰 */
+  /* 用于增强卡片的视觉层次感，不干扰主要内容 */
   .task-big-level-bg {
     @apply absolute right-0 top-0
            text-[56px] font-black opacity-[0.02];
@@ -61,25 +100,47 @@
   /* ===============================
    * 竖向小卡
    * =============================== */
+  /* 竖向小卡容器 - 使用flex布局，垂直排列 */
+  /* flex flex-col实现内部元素垂直堆叠 */
   .task-small {
     @apply flex flex-col;
   }
 
+  /* 竖向小卡图片容器 - 相对定位，固定宽高比例 */
+  /* relative为内部绝对定位元素提供参考 */
+  /* aspect-4/3设置图片宽高比为4:3，保持视觉一致性 */
   .task-small-image {
     @apply relative aspect-4/3;
   }
 
+  /* 竖向小卡渐变遮罩 - 绝对定位，从底部向上的渐变 */
+  /* absolute inset-x-0 bottom-0固定在图片底部 */
+  /* h-2/5设置遮罩高度为图片的2/5 */
+  /* bg-gradient-to-t实现从下到上的渐变 */
+  /* from-white via-white/60 to-transparent创建平滑过渡效果 */
+  /* 用于图片与文字内容的自然衔接 */
   .task-small-gradient {
     @apply absolute inset-x-0 bottom-0 h-2/5
            bg-gradient-to-t from-white via-white/60 to-transparent;
   }
 
+  /* 竖向小卡排名标签 - 绝对定位在图片右上角 */
+  /* absolute top-2 right-2固定在右上角，与边缘保持距离 */
+  /* text-[9px]极小字体，font-black加粗 */
+  /* bg-white/95半透明白色背景，增强可读性 */
+  /* px-1.5 py-0.5适当内边距，rounded圆角 */
+  /* shadow-sm添加轻微阴影，提升视觉层次感 */
   .task-small-rank {
     @apply absolute top-2 right-2
            text-[9px] font-black bg-white/95
            px-1.5 py-0.5 rounded shadow-sm;
   }
 
+  /* 竖向小卡内容区域 - 负上边距，覆盖图片底部 */
+  /* -mt-5负上边距，使内容区域向上覆盖图片底部 */
+  /* px-3 pt-1 pb-3.5设置内边距，顶部内边距较小以贴近图片 */
+  /* flex flex-col justify-between实现垂直方向的两端对齐 */
+  /* flex-1占据剩余空间，relative z-10确保内容在最上层 */
   .task-small-content {
     @apply -mt-5 px-3 pt-1 pb-3.5
            flex flex-col justify-between
@@ -89,6 +150,12 @@
   /* ===============================
    * 底部提示
    * =============================== */
+  /* 底部提示信息 - 居中显示，位于页面底部 */
+  /* text-center文字居中，mt-10 mb-4设置上下间距 */
+  /* text-slate-300浅灰色文字，text-xs小字体 */
+  /* tracking-wider增加字母间距，提升可读性 */
+  /* py-2添加上下内边距，增加点击区域 */
+  /* 用于显示页面加载状态、空数据提示等信息 */
   .task-footer {
     @apply text-center mt-10 mb-4
            text-slate-300 text-xs
