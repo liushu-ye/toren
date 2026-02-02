@@ -13,6 +13,7 @@
         <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" />
     </filter>
 </svg>
+
 </template>
 
 <style scoped>
