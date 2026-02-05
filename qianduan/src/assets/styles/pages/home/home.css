@@ -1,0 +1,21 @@
+@layer components {
+  /* ===============================
+   * 页面整体
+   * =============================== */
+  /* 任务页面主容器 - 设置最小高度、背景色、文字颜色和字体 */
+  /* 采用#f8f9fa浅灰色背景，营造简洁现代的视觉效果 */
+  /* pb-24为底部留出足够空间，避免内容被导航栏遮挡 */
+  .task-page {
+    @apply min-h-screen bg-[#f8f9fa] text-slate-800 font-sans pb-24;
+  }
+
+  /* 任务页面主要内容区域 - 添加左右内边距和顶部间距 */
+  /* px-4确保在移动设备上有合适的边距，mt-4与页面顶部留出空间 */
+  /* flex flex-col实现纵向排列，items-center使子元素横向居中 */
+  .task-main {
+    @apply px-4 mt-4
+           flex flex-col items-center;
+  }
+
+  
+}

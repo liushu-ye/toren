@@ -9,6 +9,42 @@ const router = createRouter({
       name: 'Home',
       component: () => import('@/pages/home.vue'),
       meta: { requiresAuth: false }, // 需要登录
+      children: [
+        {
+          path: '/day',
+          name: 'day',
+          component: () => import('@/components/home/task.vue'),
+          meta: { requiresAuth: false }, // 不需要登录
+        },
+        {
+          path: '/adventure',
+          name: 'adventure',
+          component: () => import('@/components/home/task.vue'),
+          meta: { requiresAuth: false }, // 不需要登录
+        },
+        {
+          path: '/bounty',
+          name: 'bounty',
+          component: () => import('@/components/home/task.vue'),
+          meta: { requiresAuth: false }, // 不需要登录
+        },
+        {
+          path: '/activity',
+          name: 'activity',
+          component: () => import('@/components/home/task.vue'),
+          meta: { requiresAuth: false }, // 不需要登录
+        },
+        {
+          path: '/official',
+          name: 'official',
+          component: () => import('@/components/home/task.vue'),
+          meta: { requiresAuth: false }, // 不需要登录
+        },
+        {
+          path: '',
+          redirect: '/day',
+        },
+      ]
     },
     {
       path: '/login',

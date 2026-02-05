@@ -1,0 +1,44 @@
+@layer components {
+    /* ===============================
+   * 筛选导航
+   * =============================== */
+  /* 筛选导航容器 - 固定宽度，背景色，圆角，边框和阴影 */
+  /* w-full设置宽度为100%，bg-white白色背景 */
+  /* rounded-xl大圆角营造现代感 */
+  /* border-2添加2px边框，shadow-md提供中等阴影 */
+  /* .task-filter {
+    @apply w-full bg-white rounded-xl overflow-hidden
+           border-2 shadow-md;
+  } */
+
+}
+
+
+@layer components {
+  /* 容器：无背景，确保居中 */
+  .task-filter-container {
+    @apply w-full flex justify-center;
+  }
+
+  /* 布局层：控制间距 */
+  .task-filter {
+    @apply flex items-center space-x-8 py-2; /* 缩小垂直内边距 */
+  }
+
+  /* 导航项基础：相对定位，方便下划线定位 */
+  .task-filter-item {
+    @apply text-sm text-gray-500 transition-colors duration-200 hover:text-gray-800 relative pb-1;
+  }
+
+  /* 激活状态：颜色变深或变色 */
+  .task-filter-item.router-link-active {
+    @apply text-black font-semibold;
+  }
+
+  /* 激活时的下划线：通过 bottom 值控制距离 */
+  .task-filter-item.router-link-active::after {
+    content: "";
+    /* bottom: 0 紧贴文字底边，可以微调为 1px 或 2px 来拉开极小距离 */
+    @apply absolute bottom-0 left-0 w-full h-0.5 bg-black rounded-full;
+  }
+}

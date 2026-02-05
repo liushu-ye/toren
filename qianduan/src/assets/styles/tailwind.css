@@ -8,9 +8,7 @@
 
 /* 组件样式 */
 @import "./components/rail.css";
-@import "./components/buttons.css";
-@import "./components/forms.css";
-@import "./components/navigation.css";
+
 
 /* 功能样式 */
 @import "./features/animations.css";
@@ -18,7 +16,11 @@
 @import "./features/responsive.css";
 
 /* 页面样式 */
-@import "./pages/home.css";
+@import "./pages/home/home.css";
+@import "./pages/home/card.css";
+@import "./pages/home/filter.css";
+
+
 @import "./pages/login.css";
 @import "./pages/public.css";
 
