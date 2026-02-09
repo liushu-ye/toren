@@ -13,7 +13,7 @@
   /* px-4确保在移动设备上有合适的边距，mt-4与页面顶部留出空间 */
   /* flex flex-col实现纵向排列，items-center使子元素横向居中 */
   .task-main {
-    @apply px-4 mt-4
+    @apply px-4
            flex flex-col items-center;
   }
 
