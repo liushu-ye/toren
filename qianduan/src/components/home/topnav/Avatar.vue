@@ -24,7 +24,7 @@ const props = withDefaults(defineProps<{
 
 // 尺寸样式映射
 const sizeMap: Record<AvatarSize, string> = {
-  sm: 'w-8 h-8 text-xs', // 小尺寸
+  sm: 'w-9 h-9 text-xs', // 小尺寸
   md: 'w-12 h-12 text-sm', // 中等尺寸
   lg: 'w-16 h-16 text-base' // 大尺寸
 }
