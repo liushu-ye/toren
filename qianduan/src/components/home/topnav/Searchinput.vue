@@ -73,7 +73,7 @@ const inputClass = computed(() => [
 
 <template>
   <div class="relative  flex-1">
-  
+
     <span
       class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none"
     >

@@ -10,10 +10,11 @@
 </script>
 
 <template>
-    <header class="flex items-center justify-between px-4 w-full">
+    <header class="flex items-center justify-between px-4 w-full bg-gray-100 shadow-sm">
         <div class="flex items-center justify-evenly gap-4">
             <Avatar src="https://picsum.photos/200" :size="'sm'" :is-online="true"></Avatar>
-            <div>周口市</div>
+            <div>周口</div>
+            <div>240</div>
             
         </div>
         <div class="flex items-center justify-evenly gap-4">
